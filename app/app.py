@@ -1,7 +1,10 @@
 import streamlit as st
 import joblib
+import os
 
-model = joblib.load('model/sentiment_model.pkl')
+model_path = os.path.join(os.path.dirname(__file__), 'model', 'sentiment_model.pkl')
+model = joblib.load(model_path)
+print(model_path)
 vectorizer = joblib.load('model/vectorizer.pkl')
 
 st.title("🎬 Movie Review Sentiment Analyzer")

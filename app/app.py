@@ -3,9 +3,9 @@ import joblib
 import os
 
 model_path = os.path.join(os.path.dirname(__file__), 'model', 'sentiment_model.pkl')
+vector_path = os.path.join(os.path.dirname(__file__),'model','vectorizer.pkl')
 model = joblib.load(model_path)
-print(model_path)
-vectorizer = joblib.load('model/vectorizer.pkl')
+vectorizer = joblib.load(vector_path)
 
 st.title("🎬 Movie Review Sentiment Analyzer")
 
